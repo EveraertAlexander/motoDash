@@ -1,0 +1,102 @@
+.dashboard {
+    margin: 0;
+    padding: 16px;
+    cursor: none;
+}
+
+.gauge {
+    width: 100%;
+    max-width: 100%;
+}
+
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #cfcfcf;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 5%;
+    background: red;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__fill--container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center bottom;
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__fill--secondary {
+    position: absolute;
+    top: 100%;
+    width: 86%;
+    height: 86%;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 100% 200%;
+    border-bottom-right-radius: 100% 200%;
+    transform-origin: center top;
+}
+
+.gauge__cover {
+    width: 90%;
+    height: 180%;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gauge__body--secondary {
+    width: 85%;
+    height: 170%;
+    background: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gauge__cover--secondary {
+    width: 75%;
+    height: 150%;
+    background: white;
+    top: 25%;
+    padding-bottom: 25%;
+}
+
+.gauge__values {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.accel__pos {
+    transform: rotate(-0.25turn);
+}
+
+.accel__neg {
+    transform: rotate(0.25turn);
+}

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Live Dashboard</title>
+    <meta name="description" content="This is my HTML5 boilerplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#44c8f5">
+    <meta name="theme-color" content="#44c8f5">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script>
+    <script src="script/dashboard.js"></script>
+    <script src="script/datahandler.js"></script>
+    <link rel="stylesheet" href="style/gauge.css">
+    <link rel="stylesheet" href="style/screen.css">
+    <link rel="stylesheet" href="style/normalize.css">
+</head>
+
+<body>
+    <header class="o-row o-row--header o-row--neutral-x-light o-row--clear-top">
+        <div class="o-container o-container--lg">
+            <div class="c-header">
+                <div class="c-header__logo">
+                    <h1 class="c-logo">
+                        MotoDash
+                    </h1>
+                </div>
+                <div class="c-header__nav c-header__nav--main">
+                    <nav class="c-nav">
+                        <ul class="o-list c-nav__list">
+                            <li class="c-nav__item"><a class="c-nav__link" href="/Code/Frontend/">Home</a></li>
+                            <li class="c-nav__item is-selected"><a class="c-nav__link" href="/Code/Frontend/dashboard.html">Live Dashboard</a></li>
+                            <li class="c-nav__item"><a class="c-nav__link" href="/Code/Frontend/stats.html">Stats</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="c-header__mobile-nav-trigger">
+                    <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                        <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="o-row">
+        <div class="o-container">
+            <p class="c-lead c-lead--lg">Ride duration: <strong class="js-rideduration">0 minutes</strong></p>
+        </div>
+    </section>
+    <section class="o-row">
+        <div class="o-container o-container--gauge">
+            <div class="gauge o-section">
+                <div class="gauge__body">
+                    <div class="gauge__fill"></div>
+                    <div class="gauge__cover"></div>
+                    <div class="gauge__body--secondary"></div>
+                    <div class="gauge__fill--container accel__pos">
+                        <div class="gauge__fill--secondary"></div>
+                    </div>
+                    <div class="gauge__fill--container accel__neg">
+                        <div class="gauge__fill--secondary"></div>
+                    </div>
+                    <div class="gauge__cover gauge__cover--secondary o-layout o-layout--justify-center o-layout--align-center">
+                        <div class="o-layout__item u-1-of-2">
+                            <p class="c-lead--xxxl js-angle">
+                                0°
+                            </p>
+                        </div>
+                        <div class="o-layout__item u-1-of-2">
+                            <p class="c-lead--xl js-accel u-txt-align-center">
+                                0m/s²
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o-section">
+                <div class="o-layout o-layout--justify-center">
+                    <div>
+                        <p class="c-lead--xl js-oiltemp">Oil: 0°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="o-row">
+        <div class="o-container">
+            <div class="o-section">
+                <div class="o-layout o-layout--justify-center">
+                    <div class="o-layout o-layout__item o-layout--justify-center">
+                        <p class="js-button">
+                            <a class="c-link-cta c-link-cta--grey">CONNECTING...</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="c-mobile-nav">
+        <div class="c-mobile-nav__bg"></div>
+        <div class="c-mobile-nav__body">
+            <div class="c-mobile-nav__header">
+                <h1 class="c-logo">
+                    MotoDash
+                </h1>
+                <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                    <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="c-mobile-nav__nav c-mobile-nav__nav--main">
+                <nav class="c-nav">
+                    <ul class="o-list">
+                        <li class="c-nav__item"><a href="/Code/Frontend/" class="c-nav__link">Home</a></li>
+                        <li class="c-nav__item"><a href="/Code/Frontend/dashboard.html" class="c-nav__link">Live Dashboard</a></li>
+                        <li class="c-nav__item"><a href="/Code/Frontend/stats.html" class="c-nav__link">Stats</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </aside>
+    <aside class="c-form-screen">
+        <div class=".o-container .c-form-screen__container">
+            <div class="c-form-screen__bg"></div>
+            <div class="c-form-screen__body">
+                <div class="c-form-screen__header">
+                    <h3 class="c-logo">SAVE RIDE</h3>
+                    <button class="o-button-reset c-nav-trigger js-toggle-form">
+                        <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="c-form-screen__form">
+                    <div class="o-layout o-layout--justify-space-between">
+                        <p class="o-layout__item u-1-of-2 u-mb-sm">
+                            Ride name
+                        </p>
+                        <div class="o-layout__item u-1-of-2-bp1 u-mb-lg u-txt-align-left">
+                            <input class="u-max-width-xs" type="text" id="ridename" name="ridename">
+                        </div>
+                        <p class="o-layout__item u-1-of-2-bp1 u-mb-sm">
+                            Description
+                        </p>
+                        <div class="o-layout__item u-1-of-2-bp1 u-mb-lg u-txt-align-right">
+                            <input class="u-max-width-xs" type="text" id="ridedescription" name="ridedescription">
+                        </div>
+                        <div class="o-layout__item u-1-of-2-bp1"></div>
+                        <div class="o-layout__item u-1-of-2-bp1 u-txt-align-right-bp1">
+                            <a class="c-button c-btn_submit js-submitbtn" type="submit" href="#!">SUBMIT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</body>
+
+</html>

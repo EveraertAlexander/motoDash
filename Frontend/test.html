@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Testpagina Live Sensor data</title>
+    <meta name="description" content="This is my HTML5 boilerplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#44c8f5">
+    <meta name="theme-color" content="#44c8f5">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="script/app.js"></script>
+    <script src="script/datahandler.js"></script>
+    <link rel="stylesheet" href="style/gauge__test.css">
+    <link rel="stylesheet" href="style/screen.css">
+</head>
+
+<body>
+    <div class="gauge">
+        <div class="gauge__body">
+            <div class="gauge__fill"></div>
+            <div class="gauge__cover"></div>
+            <div class="gauge__body--secondary"></div>
+            <div class="gauge__fill--container accel__pos">
+                <div class="gauge__fill--secondary"></div>
+            </div>
+            <div class="gauge__fill--container accel__neg">
+                <div class="gauge__fill--secondary"></div>
+            </div>
+            <div class="gauge__cover gauge__cover--secondary o-layout o-layout--justify-center o-layout--align-center">
+                <p class="c-lead--xxxl js-angle">
+                    0
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="o-section">
+        <div class="o-layout o-layout--justify-center">
+            <div class="o-layout--item">
+                <p class="c-lead--xxl js-oiltemp">Oil: 75°C</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

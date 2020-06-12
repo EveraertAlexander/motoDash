@@ -1,0 +1,1684 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: forma-djr-text, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #4B4E6B;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.has-mobile-nav {
+    overflow: hidden;
+}
+
+.has-form-screen {
+    overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #5051DB;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: #5051DB;
+    color: white;
+    text-shadow: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+
+
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 24px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+    margin: 0 0 24px;
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+li ul,
+li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+    color: #3C3C42;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: LightGrey;
+    margin: 0 0 24px;
+}
+
+a {
+    color: #5051DB;
+    transition: all .1s ease;
+}
+
+a:visited,
+a:active {
+    color: #3E3EA8;
+}
+
+a:hover,
+a:focus {
+    color: #3E3EA8;
+}
+
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+    position: relative;
+    padding: 24px 24px 0;
+    display: flow-root;
+}
+
+
+/* color modifiers */
+
+.o-row--neutral-x-light {
+    background-color: #F7F7FA;
+}
+
+.o-row--gradient-1 {
+    background: linear-gradient(to top right, #5051DB, #3887F7);
+    color: #fff;
+}
+
+.o-row--header {
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.o-row--dark {
+    background: #433B7A;
+}
+
+
+/* size modifiers */
+
+.o-row--lg {
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+@media (min-width: 768px) {
+    .o-row {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .o-row--lg {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+}
+
+
+/* padding clear modifiers */
+
+.o-row--clear-top {
+    padding-top: 0;
+}
+
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 46.1em;
+}
+
+.o-container--lg {
+    max-width: 67.2em;
+    /* 56.4 * 20px = 1128px */
+}
+
+.o-container--sm {
+    max-width: 21.2em;
+}
+
+.o-container--gauge {
+    max-width: 500px;
+}
+
+@media(min-width: 992px) {
+    .o-container--sm {
+        max-width: 46.1em;
+    }
+}
+
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.o-section+.o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg+.o-section--lg,
+    .o-section--xl+.o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl+.o-section--xl {
+        margin-top: 72px;
+    }
+}
+
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.o-layout__item {
+    flex-basis: 100%;
+}
+
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+    margin: 0 -12px;
+}
+
+.o-layout--gutter>.o-layout__item {
+    padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+    margin: 0 -6px;
+}
+
+.o-layout--gutter-sm>.o-layout__item {
+    padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+    margin: 0 -24px;
+}
+
+.o-layout--gutter-lg>.o-layout__item {
+    padding: 0 24px;
+}
+
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+    justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+    justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+    justify-content: center;
+}
+
+.o-layout--justify-space-around {
+    justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+    justify-content: space-between;
+}
+
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+    align-items: flex-start;
+}
+
+.o-layout--align-end {
+    align-items: flex-end;
+}
+
+.o-layout--align-center {
+    align-items: center;
+}
+
+.o-layout--align-baseline {
+    align-items: baseline;
+}
+
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+    align-content: start;
+}
+
+.o-layout--align-content-end {
+    align-content: end;
+}
+
+.o-layout--align-content-center {
+    align-content: center;
+}
+
+.o-layout--align-content-space-around {
+    align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+    align-content: space-between;
+}
+
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+.o-list__item {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+
+/*
+    Component: button
+    ---
+    main button
+*/
+
+.c-blur {
+    width: 100vw;
+    height: 100vh;
+    filter: blur(4px);
+}
+
+.c-button {
+    color: #FFF;
+    max-width: 142px;
+    background: #686ABA;
+    border-radius: 24px;
+    align-content: center;
+    padding: 8px 20px;
+    margin: 0 24px 12px;
+    border: none;
+    text-decoration: none;
+}
+
+.c-button__text {
+    padding-top: 0.35em;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+}
+
+.c-button--orange {
+    background: #F26E50;
+}
+
+.c-button__text:visited,
+.c-button__text:active,
+.c-button__text:hover,
+.c-button__text {
+    color: #FFF;
+}
+
+.c-button:hover {
+    background: #3E3EA8;
+}
+
+.c-button:hover,
+.c-button:active,
+.c-button:visited {
+    color: white;
+}
+
+.c-editbtn,
+.c-editbtn:active,
+.c-editbtn:visited {
+    color: #F26E50;
+    text-decoration: none;
+}
+
+.c-editbtn:hover {
+    color: #3E3EA8;
+}
+
+.c-delete-btn {
+    fill: #F26E50;
+    width: 32px;
+    transition: 0.1s ease-out;
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.c-delete-btn:hover {
+    fill: #3E3EA8;
+    cursor: pointer;
+}
+
+.c-check-btn {
+    fill: #3E3EA8;
+    width: 32px;
+    transition: 0.1s ease-out;
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.c-check-btn:hover {
+    cursor: pointer;
+    fill: #F26E50;
+}
+
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    font-size: 24px;
+    margin-top: 24px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.c-logo__symbol {
+    height: inherit;
+}
+
+@media (min-width: 768px) {
+    .c-logo {
+        height: 40px;
+    }
+}
+
+
+/*
+    Component: Select
+    ---
+    Main footer of the website
+*/
+
+.c-select {
+    padding: 4px 13px;
+    border: none;
+    background: #686ABA;
+    color: #fff;
+    border-radius: 1.5em;
+    text-align-last: center;
+}
+
+.c-select--orange {
+    background: none;
+    box-shadow: 0 0 0 1px #F26E50;
+    color: #F26E50;
+}
+
+.c-select:focus,
+.c-select:hover {
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #F26E50;
+}
+
+.c-select--orange:focus,
+.c-select--orange:hover {
+    outline: none;
+    box-shadow: 0 0 0 1px #686ABA;
+    color: #686ABA;
+}
+
+.c-select option {
+    background: #E7E6ED;
+    color: #3E3D42;
+}
+
+.special {
+    margin-top: 5px;
+    color: #fff;
+    background: #3E3D42;
+}
+
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F9F9F9;
+}
+
+.c-header__nav {
+    display: none;
+}
+
+.c-image__main {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .c-header__logo,
+    .c-header__nav {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+    .c-header__nav,
+    .c-image__main {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .c-header__nav--main {
+        flex-grow: 2;
+        justify-content: flex-end;
+    }
+    .c-header__mobile-nav-trigger {
+        display: none;
+    }
+}
+
+
+/*
+    Component: progressbar
+    ---
+    Progress bars
+*/
+
+.c-progressbar {
+    width: 100%;
+    color: white;
+}
+
+.c-bar {
+    position: relative;
+    width: 100%;
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+.c-bar__bar {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    transition: 0.2s ease-out;
+}
+
+.c-bar__value {
+    position: absolute;
+    transition: 0.2s ease-out;
+}
+
+.c-statname {
+    margin-top: 6px;
+}
+
+
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c-footer__logo {
+    width: 100%;
+}
+
+.c-footer__nav {
+    width: 50%;
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .c-footer__logo {
+        display: flex;
+        justify-content: center;
+        padding: 0 12px;
+    }
+    .c-footer__nav {
+        width: auto;
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+        justify-content: space-between;
+    }
+    .c-footer__nav {
+        padding: 0;
+    }
+    .c-footer__logo+.c-footer__nav {
+        order: -1;
+    }
+    .c-footer__logo {
+        width: auto;
+    }
+    /*
+        Bonus: real centering with CSS
+        Checkout: https://css-tricks.com/centering-css-complete-guide/
+    */
+    /* .c-footer__logo {
+        width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .c-footer__logo .c-logo {
+        margin-bottom: 0;
+    } */
+}
+
+
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    outline: none;
+}
+
+.c-nav-trigger__svg {
+    fill: #202024;
+    height: 100%;
+}
+
+.c-nav {
+    font-size: 20px;
+    line-height: 30x;
+}
+
+.c-nav--meta {
+    font-size: 16px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    padding: 8px 0;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: #202024;
+}
+
+.c-nav__link--meta,
+.c-nav__link--meta:visited,
+.c-nav__link--meta:active {
+    color: #6C6C75;
+}
+
+.is-selected .c-nav__link,
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: #686ABA;
+}
+
+@media (min-width: 768px) {
+    .c-nav__list {
+        display: flex;
+        margin-left: -16px;
+        margin-right: -16px;
+        margin-bottom: 0;
+    }
+    .c-nav__link {
+        padding: 8px 16px;
+    }
+}
+
+
+/*
+    Component: page
+    ---
+    Page component for mobile nav transition
+*/
+
+.c-page {
+    position: relative;
+    will-change: transform;
+    transition: transform .25s ease;
+}
+
+.has-mobile-nav .c-page {
+    /* option 1 scale */
+    /* transform: scale(.98); */
+    /* option 2 push left */
+    /* transform: translateX(100%); */
+    /* option 3 slide left */
+    transform: translateX(25%);
+}
+
+@media (min-width: 992px) {
+    /* Reset the transform on larger viewports */
+    .c-page {
+        transform: none !important;
+    }
+}
+
+
+/*
+    Component: mobile nav
+    ---
+    Dedicated mobile nav component
+*/
+
+.c-mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.has-mobile-nav .c-mobile-nav {
+    pointer-events: auto;
+}
+
+.c-mobile-nav__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.c-mobile-nav__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #202024;
+    will-change: opacity;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+.has-mobile-nav .c-mobile-nav__bg {
+    opacity: .5;
+}
+
+.c-mobile-nav__body {
+    position: relative;
+    padding: 0 24px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    will-change: transform;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+}
+
+.has-mobile-nav .c-mobile-nav__body {
+    transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+    .c-mobile-nav__body {
+        padding: 0 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Hide the mobile nav on larger viewports even whent it's open on smaller screens */
+    .c-mobile-nav {
+        display: none !important;
+    }
+}
+
+
+/*
+    Component: form screen
+    ---
+    Lead type treatments to style everything that differs from standard typography elements
+*/
+
+.c-form-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.has-form-screen .c-form-screen {
+    pointer-events: auto;
+}
+
+.has-confirm-screen .c-form-screen {
+    pointer-events: auto;
+}
+
+.c-form-screen__container {
+    display: flex;
+    justify-content: center;
+}
+
+.c-form-screen__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #202024;
+    will-change: opacity;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+.c-form-screen__body {
+    position: relative;
+    padding: 0 24px;
+    width: 50vw;
+    background-color: white;
+    border: 2px solid black;
+    will-change: transform;
+    transform: translateX(150%);
+    transition: transform .25s ease-out;
+}
+
+.c-form-screen__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.has-form-screen .c-form-screen__body {
+    transform: translateX(0%);
+}
+
+.c-form-screen__body--confirm {
+    width: 100%;
+    transform: translateY(100vh);
+}
+
+.has-confirm-screen .c-form-screen__body--confirm {
+    transform: translateY(0%);
+}
+
+
+/*
+    Component: Lead
+    ---
+    Lead type treatments to style everything that differs from standard typography elements
+*/
+
+.c-lead {
+    font-weight: 400;
+}
+
+.c-lead--lg {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.c-lead--xl {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.c-lead--xxl {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.c-lead--xxxl {
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.c-lead--xxxxl {
+    font-size: 56px;
+    line-height: 74px;
+    text-align: center;
+    font-weight: 400;
+}
+
+@media(min-width: 1200px) {
+    .c-lead--xxxl {
+        font-size: 52px;
+        line-height: 78px;
+    }
+}
+
+
+/*
+    Component: figure
+    ---
+    Special type of figure and figcaption
+*/
+
+.c-figure {
+    position: relative;
+    margin: 0;
+}
+
+.c-figure__caption {
+    line-height: 15px;
+    margin-top: 8px;
+    padding-left: 6px;
+    padding-top: 1px;
+    border: 2px solid #5051DB;
+    border-width: 0 0 0 2px;
+}
+
+@media (min-width: 768px) {
+    .c-figure__caption--absolute {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 8px;
+        text-align: right;
+        background-color: #fff;
+        padding: 16px;
+        max-width: 260px;
+        border-width: 0 4px 0 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-figure {
+        display: none;
+    }
+}
+
+
+/*
+    Component: Title icon
+    ---
+    Special type of title with icon
+*/
+
+.c-icon {
+    fill: #737373;
+}
+
+.c-icon:hover {
+    fill: #686ABA;
+}
+
+.c-title-icon {
+    display: flex;
+    align-items: flex-start;
+}
+
+.c-title-icon__icon {
+    height: 70px;
+    margin-right: 20px;
+}
+
+.c-title-icon__path {
+    fill: #202024;
+}
+
+@media (min-width: 768px) {
+    .c-title-icon__icon {
+        height: 84px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-title-icon__icon {
+        height: 112px;
+    }
+}
+
+
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
+
+.c-link-cta {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-radius: 26px;
+    line-height: 27px;
+    font-weight: 600;
+    padding: 13px 24px;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
+    background: #686ABA;
+}
+
+.c-link-cta--red {
+    background: #F26E50;
+}
+
+.c-link-cta--grey {
+    background: #4B4E6B;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+    color: #f1f1f1;
+}
+
+.c-link-cta:hover {
+    color: #fff;
+    background-position: right center;
+    box-shadow: inset 0 0 0 1px rgba(67, 59, 122, .4), 0 0 10px rgba(136, 139, 255, .8);
+}
+
+.c-link-cta--red:hover {
+    box-shadow: inset 0 0 0 1px rgba(242, 110, 80, .4), 0 0 10px rgba(255, 188, 172, .8);
+}
+
+
+/* inversed */
+
+.c-link-cta--inverse,
+.c-link-cta--inverse:visited,
+.c-link-cta--inverse:active,
+.c-link-cta--inverse:hover {
+    color: #fff;
+}
+
+.c-link-cta--inverse::after,
+.c-link-cta--inverse:hover::after {
+    background-color: #fff;
+}
+
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+.u-nocursor {
+    cursor: none;
+}
+
+.u-txt-align-right {
+    text-align: right;
+}
+
+.u-txt-align-left {
+    text-align: left;
+}
+
+.u-txt-align-center {
+    text-align: center;
+}
+
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-primary-light {
+    color: #686ABA;
+}
+
+.u-color-primary-base {
+    color: #433B7A;
+}
+
+.u-color-primary-dark {
+    color: #3E3EA8;
+}
+
+.u-color-white {
+    color: #FFF;
+}
+
+.u-bg-orange {
+    background: #F26E50;
+}
+
+.u-fill-grey {
+    fill: #4B4E6B;
+}
+
+.u-color-grey-light {
+    color: #9F9DAB;
+}
+
+.u-bg-grey {
+    background: #CEDAF2;
+}
+
+.u-bg-dark {
+    background: #3E3D42;
+}
+
+.u-border-bottom-orange {
+    border-bottom: 1px solid #F26E50;
+}
+
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+    margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+    margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+    margin-bottom: 48px !important;
+}
+
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+    width: 100%;
+    max-width: 100%!important;
+}
+
+.u-max-width-sm {
+    max-width: 36em !important;
+}
+
+.u-max-width-md {
+    max-width: 42em !important;
+}
+
+.u-max-width-lg {
+    max-width: 60em !important;
+}
+
+.u-max-width-xl {
+    max-width: 75em !important;
+}
+
+.u-max-width-none {
+    max-width: none !important;
+}
+
+
+/*
+    Utility: Flex
+    ---
+    Utility classes to put specific flex properties onto elements
+    Will be mostly used on o-layout__item
+*/
+
+.u-flex-basis-auto {
+    flex-basis: auto !important;
+}
+
+.u-flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+.u-1-of-2 {
+    flex-basis: calc(100% / 2) !important;
+}
+
+.u-1-of-3 {
+    flex-basis: calc(100% / 3) !important;
+}
+
+.u-2-of-3 {
+    flex-basis: calc(100% / 3 * 2) !important;
+}
+
+.u-1-of-4 {
+    flex-basis: calc(100% / 4) !important;
+}
+
+.u-3-of-4 {
+    flex-basis: calc(100% / 4 * 3) !important;
+}
+
+.u-1-of-5 {
+    flex-basis: calc(100% / 5) !important;
+}
+
+.u-2-of-5 {
+    flex-basis: calc(100% / 5 * 2) !important;
+}
+
+.u-3-of-5 {
+    flex-basis: calc(100% / 5 * 3) !important;
+}
+
+.u-4-of-5 {
+    flex-basis: calc(100% / 5 * 4) !important;
+}
+
+.u-1-of-6 {
+    flex-basis: calc(100% / 6) !important;
+}
+
+.u-5-of-6 {
+    flex-basis: calc(100% / 6 * 5) !important;
+}
+
+@media (min-width: 576px) {
+    .u-1-of-2-bp1 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp1 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp1 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp1 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp1 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp1 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp1 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp1 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp1 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp1 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp1 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+    .u-txt-align-right-bp1 {
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) {
+    .u-1-of-2-bp2 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp2 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp2 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp2 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp2 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp2 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp2 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp2 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp2 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp2 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp2 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .u-1-of-2-bp3 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp3 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp3 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp3 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp3 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp3 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp3 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp3 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp3 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp3 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp3 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .u-1-of-2-bp4 {
+        flex-basis: calc(100% / 2) !important;
+    }
+    .u-1-of-3-bp4 {
+        flex-basis: calc(100% / 3) !important;
+    }
+    .u-2-of-3-bp4 {
+        flex-basis: calc(100% / 3 * 2) !important;
+    }
+    .u-1-of-4-bp4 {
+        flex-basis: calc(100% / 4) !important;
+    }
+    .u-3-of-4-bp4 {
+        flex-basis: calc(100% / 4 * 3) !important;
+    }
+    .u-1-of-5-bp4 {
+        flex-basis: calc(100% / 5) !important;
+    }
+    .u-2-of-5-bp4 {
+        flex-basis: calc(100% / 5 * 2) !important;
+    }
+    .u-3-of-5-bp4 {
+        flex-basis: calc(100% / 5 * 3) !important;
+    }
+    .u-4-of-5-bp4 {
+        flex-basis: calc(100% / 5 * 4) !important;
+    }
+    .u-1-of-6-bp4 {
+        flex-basis: calc(100% / 6) !important;
+    }
+    .u-5-of-6-bp4 {
+        flex-basis: calc(100% / 6 * 5) !important;
+    }
+}
+
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in mobile first design
+*/
+
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
