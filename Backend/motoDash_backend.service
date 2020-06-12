@@ -1,0 +1,14 @@
+[Unit]
+Description=Full backend of motoDash
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u app.py
+WorkingDirectory=/YOURFILEPATH/motoDash/Backend/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=admin
+
+[Install]
+WantedBy=multi-user.target
